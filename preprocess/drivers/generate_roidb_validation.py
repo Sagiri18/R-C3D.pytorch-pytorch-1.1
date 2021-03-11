@@ -20,7 +20,7 @@ WINS = [LENGTH * 8]
 #LENGTH = 192
 #WINS = [LENGTH * 32]
 STEP = LENGTH / 4
-FRAME_DIR = '/content/R-C3D-driver-master/drivers/driversFrames/frames_'+str(FPS)
+FRAME_DIR = '/content/R-C3D.pytorch-pytorch-1.1/drivers/driversFrames/frames_'+str(FPS)
 
 USE_FLIPPED = False
 
