@@ -141,7 +141,7 @@ def train_net(tdcnn_demo, dataloader, optimizer, args):
     start = time.time()
         
     data_start = time.time()
-    recordtxt = open('/content/R-C3D-driver-pytorch-1.0/record.txt', "a+")
+    recordtxt = open('/content/R-C3D.pytorch-pytorch-1.1/record.txt', "a+")
     for step, (video_data, gt_twins, num_gt) in enumerate(dataloader):
         video_data = video_data.cuda()
         gt_twins = gt_twins.cuda()

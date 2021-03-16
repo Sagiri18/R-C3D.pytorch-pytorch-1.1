@@ -215,7 +215,7 @@ if __name__ == '__main__':
         args.num_classes = 5
         args.set_cfgs = ['ANCHOR_SCALES', '[2,4,5,6,8,9,10,12,14,16]', 'NUM_CLASSES', args.num_classes]
 
-    args.cfg_file = "/content/R-C3D-driver-pytorch-1.0/cfgs/{}_{}.yml".format(args.net, args.dataset)
+    args.cfg_file = "/content/R-C3D.pytorch-pytorch-1.1/cfgs/{}_{}.yml".format(args.net, args.dataset)
 
     if args.cfg_file is not None:
         cfg_from_file(args.cfg_file)

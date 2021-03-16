@@ -74,11 +74,11 @@ setup(
     name='nms_cuda',
     ext_modules=[
         CUDAExtension('nms_cuda', [
-            'src/nms_cuda.cpp',
-            'src/nms_kernel.cu',
+            '/content/R-C3D.pytorch-pytorch-1.1/lib/model/nms/src/nms_cuda.cpp',
+            '/content/R-C3D.pytorch-pytorch-1.1/lib/model/nms/src/nms_kernel.cu',
         ]),
         CppExtension('nms_cpu', [
-            'src/nms_cpu.cpp',
+            '/content/R-C3D.pytorch-pytorch-1.1/lib/model/nms/src/nms_cpu.cpp',
         ]),
     ],
     cmdclass={'build_ext': BuildExtension})
