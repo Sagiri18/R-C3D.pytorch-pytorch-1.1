@@ -46,7 +46,7 @@ def parse_args():
     Parse input arguments
     """
     parser = argparse.ArgumentParser(description='Test a R-C3D network')
-    parser.add_argument('--dataset', dest='dataset',default='thumos14', type=str,
+    parser.add_argument('--dataset', dest='dataset',default='drivers', type=str,
                       help='test dataset')
     parser.add_argument('--net', dest='net',default='c3d', type=str, choices=['c3d', 'res18', 'res34', 'res50', 'eco'],
                       help='main network c3d, i3d, res34, res50')
