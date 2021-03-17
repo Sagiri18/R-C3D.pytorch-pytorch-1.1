@@ -123,8 +123,8 @@ class sampler(Sampler):
         return self.num_data
 
 def get_roidb(path):
-    data = pickle.load(open('/content/train_data_25fps_flipped.pkl', 'rb'))
-    # data = pickle.load(open(path, 'rb'))
+    # data = pickle.load(open('/content/train_data_25fps_flipped.pkl', 'rb'))
+    data = pickle.load(open(path, 'rb'))
     return data
 
 def train_net(tdcnn_demo, dataloader, optimizer, args):
@@ -187,7 +187,7 @@ def train_net(tdcnn_demo, dataloader, optimizer, args):
             print("\t\t\tfg/bg=(%d/%d), gt_twins: %d, time cost: %f" % (fg_cnt, bg_cnt, gt_cnt, end-start))
             print("\t\t\trpn_cls: %.4f, rpn_twin: %.4f, rcnn_cls: %.4f, rcnn_twin %.4f" \
                           % (loss_rpn_cls, loss_rpn_twin, loss_rcnn_cls, loss_rcnn_twin))
-            print("one step data time: %.4f" % (data_time))                          
+            print("one step data time: %.4f" % (data_time), file= recordtxt)
             if args.use_tfboard:
                 info = {
                 'loss': loss_temp,
@@ -245,7 +245,8 @@ if __name__ == '__main__':
         args.num_classes = 5
         args.set_cfgs = ['ANCHOR_SCALES', '[2,4,5,6,8,9,10,12,14,16]', 'NUM_CLASSES', args.num_classes]
 
-    args.cfg_file = "/content/R-C3D.pytorch-pytorch-1.1/cfgs/{}_{}.yml".format(args.net, args.dataset)
+    # args.cfg_file = "/content/R-C3D.pytorch-pytorch-1.1/cfgs/{}_{}.yml".format(args.net, args.dataset)
+    args.cfg_file = "cfgs/{}_{}.yml".format(args.net, args.dataset)
 
     cfg.CUDA = True 
     cfg.USE_GPU_NMS = True

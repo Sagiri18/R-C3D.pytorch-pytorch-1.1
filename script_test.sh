@@ -20,4 +20,4 @@ python /content/R-C3D.pytorch-pytorch-1.1/test_net.py \
   ${EXTRA_ARGS}
 
 #evaluation
-python ./evaluation/${EX_DIR}/${EX_DIR}_log_analysis.py $LOG --framerate ${FRAMERATE}
+#python ./evaluation/${EX_DIR}/${EX_DIR}_log_analysis.py $LOG --framerate ${FRAMERATE}
