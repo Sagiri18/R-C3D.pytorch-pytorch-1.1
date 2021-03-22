@@ -21,7 +21,8 @@ def generate_classes(data):
 
     class_list = list(set(class_list))
     class_list = sorted(class_list)
-    classes = {'Background': 0}
+    # classes = {'Background': 0}
+    classes = {}
     for i,cls in enumerate(class_list):
         classes[cls] = i + 1
     return classes
